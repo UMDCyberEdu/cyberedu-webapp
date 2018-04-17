@@ -1,18 +1,43 @@
 <template>
-  <div class="home">
-    <img src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js + TypeScript App"/>
-  </div>
+  <section class="section">
+    <div class="columns">
+      <div class="column is-4">
+        
+        <StartModuleCard :title="'Passwords'" :img="require('@/assets/passwords_module.jpeg')" 
+        :pathToModule="'/'"> 
+          Learn how to make good passwords and manage passwords with ease.
+        </StartModuleCard>
+      
+      </div>
+      <div class="column is-4">
+        
+        <StartModuleCard :title="'Phishing'" :img="require('@/assets/phishing_module.jpeg')" 
+        :pathToModule="'/'"> 
+          Learn how phishing occurs and how to avoid being phished.
+        </StartModuleCard>
+      
+      </div>
+      <div class="column is-4">
+        
+        <StartModuleCard :title="'Privacy & Social Media'"
+         :img="require('@/assets/socialmedia_module.png')" 
+         :pathToModule="'/'"> 
+          Learn how to keep your information private and where your data is being shared.
+        </StartModuleCard>
+      
+      </div>
+    </div>
+  </section>
 </template>
 
 <script lang="ts">
-import Vue from 'vue';
-import HelloWorld from '@/components/HelloWorld.vue'; // @ is an alias to /src
+import Vue from 'vue'
+import StartModuleCard from '../components/StartModuleCard.vue'
 
 export default Vue.extend({
-  name: 'home',
+  name: 'Home',
   components: {
-    HelloWorld,
-  },
-});
+    StartModuleCard
+  }
+})
 </script>

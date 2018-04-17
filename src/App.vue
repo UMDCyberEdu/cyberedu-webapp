@@ -1,29 +1,74 @@
 <template>
   <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
+    
+    <NavigationBar/>
+
     <router-view/>
+
   </div>
 </template>
 
+<script lang="ts">
+import Vue from 'vue'
+import NavigationBar from './components/NavigationBar.vue'
+
+export default Vue.extend({
+  components: {
+    NavigationBar
+  }  
+})
+</script>
+
+
 <style lang="scss">
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
+// Import Bulma's core
+@import "~bulma/sass/utilities/_all";
+
+// Set your colors
+$primary: #F9690E;
+$primary-invert: findColorInvert($primary);
+
+// Setup $colors to use as bulma classes (e.g. 'is-twitter')
+$colors: (
+    "white": ($white, $black),
+    "black": ($black, $white),
+    "light": ($light, $light-invert),
+    "dark": ($dark, $dark-invert),
+    "primary": ($primary, $primary-invert),
+    "info": ($info, $info-invert),
+    "success": ($success, $success-invert),
+    "warning": ($warning, $warning-invert),
+    "danger": ($danger, $danger-invert)
+);
+
+// Links
+$link: $primary;
+$link-invert: $primary-invert;
+$link-focus-border: $primary;
+
+// Import Bulma and Buefy styles
+@import "~bulma";
+@import "~buefy/src/scss/buefy";
+
+html {
+  background-color: $white-ter;
 }
-#nav {
-  padding: 30px;
-  a {
-    font-weight: bold;
-    color: #2c3e50;
-    &.router-link-exact-active {
-      color: #42b983;
+
+.columns {
+
+  padding: 32px;
+
+  @include mobile {
+    padding: 8px;
+  }
+
+  .column {
+    padding: 32px;
+    
+    @include mobile {
+      padding: 8px;
     }
   }
 }
+
 </style>
