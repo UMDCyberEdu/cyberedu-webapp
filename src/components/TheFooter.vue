@@ -16,3 +16,9 @@ export default Vue.extend({
   name: "TheFooter"
 });
 </script>
+
+<style lang="scss" scoped>
+footer.footer {
+  background-color: transparent;
+}
+</style>
