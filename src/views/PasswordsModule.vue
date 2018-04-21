@@ -1,27 +1,16 @@
 <template>
-<section class="hero is-primary">
-  <div class="hero-body">
-    <div class="container">
-      <h1 class="title is-spaced">
-        Passwords Module
-      </h1>
-      <h2 class="subtitle is-6">
-        <router-link to="/">
-          <div class="block block__back-to-home">
-            <b-icon icon="chevron-left" size="is-small"></b-icon>
-            <span>All Modules</span>
-          </div>
-        </router-link>
-      </h2>
-    </div>
-  </div>
-</section>
+<TopHero title="Passwords Module"/>
 </template>
 
 <script lang="ts">
 import Vue from "vue";
+import TopHero from "../components/Module/TopHero.vue";
+
 export default Vue.extend({
-  name: "PasswordsModule"
+  name: "PasswordsModule",
+  components: {
+    TopHero
+  }
 });
 </script>
 
