@@ -5,16 +5,20 @@
 
     <router-view/>
 
+    <TheFooter/>
+
   </div>
 </template>
 
 <script lang="ts">
 import Vue from "vue";
 import NavigationBar from "./components/NavigationBar.vue";
+import TheFooter from "./components/TheFooter.vue";
 
 export default Vue.extend({
   components: {
-    NavigationBar
+    NavigationBar,
+    TheFooter
   }
 });
 </script>

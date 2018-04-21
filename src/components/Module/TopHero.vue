@@ -30,3 +30,9 @@ export default Vue.extend({
   }
 });
 </script>
+
+<style scoped>
+.block__back-to-home:hover {
+  text-decoration: underline;
+}
+</style>

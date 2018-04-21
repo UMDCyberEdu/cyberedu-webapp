@@ -14,10 +14,10 @@
 </template>
 
 <script lang="ts">
-import Vue from 'vue'
+import Vue from "vue";
 
 export default Vue.extend({
-  name: 'StartModuleCard',
+  name: "StartModuleCard",
   props: {
     title: {
       type: String,
@@ -32,11 +32,18 @@ export default Vue.extend({
       required: true
     }
   }
-})
+});
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
+$primary: #ec644b;
+
 a.button {
   width: 100%;
+}
+
+div.box {
+  border-radius: 0px;
+  border-top: 8px solid $primary;
 }
 </style>

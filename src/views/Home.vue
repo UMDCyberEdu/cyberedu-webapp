@@ -41,3 +41,10 @@ export default Vue.extend({
   }
 });
 </script>
+
+<style scoped>
+.section {
+  padding-top: 24px;
+  padding-bottom: 24px;
+}
+</style>
