@@ -9,14 +9,14 @@
 </template>
 
 <script lang="ts">
-import Vue from 'vue'
-import NavigationBar from './components/NavigationBar.vue'
+import Vue from "vue";
+import NavigationBar from "./components/NavigationBar.vue";
 
 export default Vue.extend({
   components: {
     NavigationBar
-  }  
-})
+  }
+});
 </script>
 
 
@@ -25,20 +25,20 @@ export default Vue.extend({
 @import "~bulma/sass/utilities/_all";
 
 // Set your colors
-$primary: #F9690E;
+$primary: #ec644b;
 $primary-invert: findColorInvert($primary);
 
 // Setup $colors to use as bulma classes (e.g. 'is-twitter')
 $colors: (
-    "white": ($white, $black),
-    "black": ($black, $white),
-    "light": ($light, $light-invert),
-    "dark": ($dark, $dark-invert),
-    "primary": ($primary, $primary-invert),
-    "info": ($info, $info-invert),
-    "success": ($success, $success-invert),
-    "warning": ($warning, $warning-invert),
-    "danger": ($danger, $danger-invert)
+  "white": ($white, $black),
+  "black": ($black, $white),
+  "light": ($light, $light-invert),
+  "dark": ($dark, $dark-invert),
+  "primary": ($primary, $primary-invert),
+  "info": ($info, $info-invert),
+  "success": ($success, $success-invert),
+  "warning": ($warning, $warning-invert),
+  "danger": ($danger, $danger-invert)
 );
 
 // Links
@@ -55,7 +55,6 @@ html {
 }
 
 .columns {
-
   padding: 32px;
 
   @include mobile {
@@ -64,11 +63,10 @@ html {
 
   .column {
     padding: 32px;
-    
+
     @include mobile {
       padding: 8px;
     }
   }
 }
-
 </style>

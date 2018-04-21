@@ -4,7 +4,7 @@
       <div class="column is-4">
         
         <StartModuleCard :title="'Passwords'" :img="require('@/assets/passwords_module.jpeg')" 
-        :pathToModule="'/'"> 
+        :pathToModule="'/passwords'"> 
           Learn how to make good passwords and manage passwords with ease.
         </StartModuleCard>
       
@@ -31,13 +31,13 @@
 </template>
 
 <script lang="ts">
-import Vue from 'vue'
-import StartModuleCard from '../components/StartModuleCard.vue'
+import Vue from "vue";
+import StartModuleCard from "../components/StartModuleCard.vue";
 
 export default Vue.extend({
-  name: 'Home',
+  name: "Home",
   components: {
     StartModuleCard
   }
-})
+});
 </script>
