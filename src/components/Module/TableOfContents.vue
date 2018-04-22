@@ -1,6 +1,9 @@
 <template>
 <div>
-<h1 class="title is-5" v-for="section in sections" v-bind:key="section.id" :class="[ {'completed': section.id < current_section_id}]">{{section.title}}</h1>
+<h1 class="title is-5" v-for="section in sections" v-bind:key="section.id" :class="[ {'completed': section.id < current_section_id}]">
+  <span class="circle" :class="[{'is-invisible': section.id != current_section_id}]"></span>
+  {{section.title}}
+</h1>
 </div>
 </template>
 
@@ -37,8 +40,17 @@ export default Vue.extend({
 });
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
+$primary: #ec644b;
+
 h1.completed {
   color: lightgray;
+}
+
+.circle:before {
+  content: " \25CF";
+  color: $primary;
+  font-size: 1.5rem;
+  margin-right: 0.5rem;
 }
 </style>
