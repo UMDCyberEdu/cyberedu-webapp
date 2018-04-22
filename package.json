@@ -6,6 +6,7 @@
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "test": "vue-cli-service test",
+    "deploy": "surge dist --domain cyberedu-webapp.surge.sh",
     "e2e": "vue-cli-service e2e"
   },
   "dependencies": {
@@ -27,6 +28,7 @@
     "babel-core": "^7.0.0-0",
     "node-sass": "^4.7.2",
     "sass-loader": "^6.0.6",
+    "surge": "^0.20.1",
     "ts-jest": "^22.0.1",
     "vue-template-compiler": "^2.5.13"
   },

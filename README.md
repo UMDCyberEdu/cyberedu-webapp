@@ -1,6 +1,6 @@
 # cyberedu-webapp
 
-Work in progress
+Work in progress: https://cyberedu-webapp.surge.sh
 
 Intended design: https://www.figma.com/file/ORkv3rerirVfFih11cIO4Fps/CyberEdu
 
