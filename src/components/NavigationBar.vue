@@ -33,3 +33,10 @@ export default Vue.extend({
   name: "NavigationBar"
 });
 </script>
+
+<style scoped>
+.navbar-item {
+  padding: 0.7rem;
+  padding-top: 0.85rem;
+}
+</style>

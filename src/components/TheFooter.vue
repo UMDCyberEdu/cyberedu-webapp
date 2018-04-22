@@ -3,7 +3,7 @@
   <div class="container">
     <div class="content has-text-centered">
       <p>
-        <strong>The CyberEdu webapp</strong> by the <a href="//umdcyberedu.github.io">UMD CyberEdu team</a>. The source code is <a href="//github.com/umdcyberedu/cyberedu-webapp">available on Github</a> 
+        <strong>The CyberEdu webapp</strong> by the <a href="//umdcyberedu.github.io">UMD CyberEdu team</a>. The source code is <a href="//github.com/umdcyberedu/cyberedu-webapp">available on Github</a>. 
       </p>
     </div>
   </div>
