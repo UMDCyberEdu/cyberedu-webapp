@@ -9,7 +9,7 @@ Here are some popular password managers:
 * 1Password
 * DashLane
 
-Each of these password managers offer a secure place to store and retrieve passwords for all your accounts on various websites.
+Each of these password managers offers a secure place to store and retrieve passwords for all your accounts on various websites.
 
 _discuss how password managers work with screenshots and possibly a video of examples_
 

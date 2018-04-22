@@ -1,7 +1,7 @@
 <template>
 <div>
 <TopHero title="Passwords Module"/>
-<div class="columns">
+<div class="columns is-gapless">
   <div class="column is-one-quarter">
     <TableOfContents :sections="sectionsTitlesIds" :current_section_id="currentSectionId"/>
   </div>
@@ -79,6 +79,18 @@ export default Vue.extend({
 </script>
 
 <style scoped>
+.columns {
+  padding: 0px;
+}
+
+.columns > .column {
+  padding: 32px !important;
+}
+
+.column.is-one-quarter {
+  background-color: white;
+}
+
 .block__back-to-home {
   margin-left: -8px;
 }

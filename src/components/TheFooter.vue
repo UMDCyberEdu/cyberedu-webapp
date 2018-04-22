@@ -18,7 +18,20 @@ export default Vue.extend({
 </script>
 
 <style lang="scss" scoped>
+// Import Bulma's core
+@import "~bulma/sass/utilities/_all";
+
 footer.footer {
-  background-color: transparent;
+  background-color: $dark;
+  color: $light;
+
+  strong {
+    color: $light;
+  }
+
+  a:hover {
+    color: $light;
+    text-decoration: underline;
+  }
 }
 </style>

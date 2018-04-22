@@ -23,9 +23,9 @@ export default Vue.extend({
 });
 </script>
 
-
-/*
-Renders markdown file as html
-
-Props: path to markdown file, onclick listener for prev/next button
-*/
+<style scoped>
+article {
+  max-height: 75vh;
+  overflow-y: auto;
+}
+</style>
