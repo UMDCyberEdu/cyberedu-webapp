@@ -17,6 +17,12 @@ Before contributing:
 1.  Familiarise yourself with [Vue.js](https://vuejs.org/), vue-router, and Webpack
 2.  Skim through the [Vue.js Style Guide](https://vuejs.org/v2/style-guide/)
 
+It's strongly recommended to use VSCode with the following extensions:
+
+* Prettier
+* Vetur
+* TSLint
+
 ### Styling
 
 Currently using [Buefy](https://buefy.github.io/#/) for default [Bulma](https://bulma.io/)-styled Vue components.
