@@ -49,6 +49,19 @@ export default Vue.extend({
     TableOfContents,
     ContentArea
   },
+  mounted() {
+    // for easy navigation among sections within the module
+    window.addEventListener("keyup", event => {
+      // left key
+      if (event.keyCode == 37) {
+        this.prevSection();
+      }
+      // right key
+      if (event.keyCode == 39) {
+        this.nextSection();
+      }
+    });
+  },
   data() {
     return {
       sectionsTitlesIds,
@@ -70,10 +83,14 @@ export default Vue.extend({
   },
   methods: {
     prevSection() {
-      this.currentSectionId--;
+      if (this.currentSectionId > 0) {
+        this.currentSectionId--;
+      }
     },
     nextSection() {
-      this.currentSectionId++;
+      if (this.currentSectionId < this.totalNumberOfSections - 1) {
+        this.currentSectionId++;
+      }
     }
   }
 });
