@@ -17,7 +17,8 @@
         </div>
       </div>
       
-      {{currentSectionId + 1}} / {{totalNumberOfSections}} 
+      <strong>{{currentSectionId + 1}} / {{totalNumberOfSections}}</strong>
+      
       <div class="level-right">
         <div class="level-item has-text-centered">
           <button class="button is-medium is-primary is-outlined" @click="nextSection" :disabled="disableNextButton">Next</button>
