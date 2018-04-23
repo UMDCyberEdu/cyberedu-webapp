@@ -1,118 +1,27 @@
 <template>
-<div>
-<TopHero title="Passwords Module"/>
-<div class="columns is-gapless">
-  <div class="column is-one-quarter">
-    <TableOfContents :sections="sectionsTitlesIds" :current_section_id="currentSectionId"/>
-  </div>
-  <div class="column is-content">
-    <ContentArea :markdown="currentContent"/>
-
-    <hr>
-
-    <nav class="level is-mobile">
-      <div class="level-left">
-        <div class="level-item has-text-centered">
-          <button class="button is-medium is-primary is-outlined" @click="prevSection" :disabled="disablePrevButton">Prev</button>
-        </div>
-      </div>
-      
-      <strong>{{currentSectionId + 1}} / {{totalNumberOfSections}}</strong>
-      
-      <div class="level-right">
-        <div class="level-item has-text-centered">
-          <button class="button is-medium is-primary is-outlined" @click="nextSection" :disabled="disableNextButton">Next</button>
-        </div>
-      </div>
-    </nav>
-  
-  </div>
-</div>
-</div>
+<CyberEduModule :title="title" :sectionsContents="sectionsContents" :sectionsTitlesIds="sectionsTitlesIds"/>
 </template>
 
 <script lang="ts">
 import Vue from "vue";
-import TopHero from "../components/Module/TopHero.vue";
-import TableOfContents from "../components/Module/TableOfContents.vue";
-import ContentArea from "../components/Module/ContentArea.vue";
+import CyberEduModule from "../components/CyberEduModule.vue";
 
 import {
-  allSectionsContents,
+  sectionsContents,
   sectionsTitlesIds
 } from "../content/PasswordsModule/_all";
 
 export default Vue.extend({
   name: "PasswordsModule",
   components: {
-    TopHero,
-    TableOfContents,
-    ContentArea
-  },
-  mounted() {
-    // for easy navigation among sections within the module
-    window.addEventListener("keyup", event => {
-      // left key
-      if (event.keyCode == 37) {
-        this.prevSection();
-      }
-      // right key
-      if (event.keyCode == 39) {
-        this.nextSection();
-      }
-    });
+    CyberEduModule
   },
   data() {
     return {
-      sectionsTitlesIds,
-      currentSectionId: 0,
-      totalNumberOfSections: sectionsTitlesIds.length
+      title: "Passwords Module",
+      sectionsContents,
+      sectionsTitlesIds
     };
-  },
-  computed: {
-    currentContent(): String {
-      // returns content as a multiline, markdown string to be rendered
-      return allSectionsContents[this.currentSectionId];
-    },
-    disablePrevButton(): boolean {
-      return this.currentSectionId <= 0;
-    },
-    disableNextButton(): boolean {
-      return this.currentSectionId >= this.totalNumberOfSections - 1;
-    }
-  },
-  methods: {
-    prevSection() {
-      if (this.currentSectionId > 0) {
-        this.currentSectionId--;
-      }
-    },
-    nextSection() {
-      if (this.currentSectionId < this.totalNumberOfSections - 1) {
-        this.currentSectionId++;
-      }
-    }
   }
 });
 </script>
-
-<style scoped>
-.columns {
-  padding: 0px;
-}
-
-.columns > .column {
-  padding: 32px !important;
-}
-
-.column.is-content {
-  background-color: white;
-}
-
-.block__back-to-home {
-  margin-left: -8px;
-}
-hr {
-  border-top: 1px solid grey;
-}
-</style>
