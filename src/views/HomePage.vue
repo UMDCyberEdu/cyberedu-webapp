@@ -35,7 +35,7 @@ import Vue from "vue";
 import StartModuleCard from "../components/StartModuleCard.vue";
 
 export default Vue.extend({
-  name: "Home",
+  name: "HomePage",
   components: {
     StartModuleCard
   }

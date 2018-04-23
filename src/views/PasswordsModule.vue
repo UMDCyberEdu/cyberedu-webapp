@@ -5,7 +5,7 @@
   <div class="column is-one-quarter">
     <TableOfContents :sections="sectionsTitlesIds" :current_section_id="currentSectionId"/>
   </div>
-  <div class="column">
+  <div class="column is-content">
     <ContentArea :markdown="currentContent"/>
 
     <hr>
@@ -13,14 +13,14 @@
     <nav class="level is-mobile">
       <div class="level-left">
         <div class="level-item has-text-centered">
-          <a class="button is-medium" @click="prevSection" :disabled="disablePrevButton">Prev</a>
+          <button class="button is-medium is-primary is-outlined" @click="prevSection" :disabled="disablePrevButton">Prev</button>
         </div>
       </div>
       
       {{currentSectionId + 1}} / {{totalNumberOfSections}} 
       <div class="level-right">
         <div class="level-item has-text-centered">
-          <a class="button is-medium" @click="nextSection" :disabled="disableNextButton">Next</a>
+          <button class="button is-medium is-primary is-outlined" @click="nextSection" :disabled="disableNextButton">Next</button>
         </div>
       </div>
     </nav>
@@ -87,7 +87,7 @@ export default Vue.extend({
   padding: 32px !important;
 }
 
-.column.is-one-quarter {
+.column.is-content {
   background-color: white;
 }
 

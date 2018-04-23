@@ -22,7 +22,7 @@ export default Vue.extend({
 @import "~bulma/sass/utilities/_all";
 
 footer.footer {
-  background-color: $dark;
+  background-color: $black;
   color: $light;
 
   strong {

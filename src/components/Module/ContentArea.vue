@@ -25,7 +25,7 @@ export default Vue.extend({
 
 <style scoped>
 article {
-  max-height: 75vh;
+  height: 75vh;
   overflow-y: auto;
 }
 </style>
