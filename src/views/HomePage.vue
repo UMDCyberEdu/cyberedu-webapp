@@ -21,7 +21,7 @@
         
         <StartModuleCard :title="'Privacy'"
          :img="require('@/assets/socialmedia_module.png')" 
-         :pathToModule="'/'"> 
+         :pathToModule="'/modules/privacy'"> 
           Learn how to keep your information private and where your data is being shared.
         </StartModuleCard>
       

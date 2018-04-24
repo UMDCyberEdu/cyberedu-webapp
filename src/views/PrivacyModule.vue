@@ -6,16 +6,16 @@
 import Vue from "vue";
 import CyberEduModule from "../components/CyberEduModule.vue";
 
-import sections from "../content/PhishingModule/_all";
+import sections from "../content/PrivacyModule/_all";
 
 export default Vue.extend({
-  name: "PhishingModule",
+  name: "PrivacyModule",
   components: {
     CyberEduModule
   },
   data() {
     return {
-      title: "Phishing Module",
+      title: "Privacy Module",
       sections
     };
   }

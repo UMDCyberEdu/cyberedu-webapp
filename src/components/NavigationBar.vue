@@ -7,20 +7,19 @@
       </a>
     </router-link>
 
-    <div class="navbar-burger">
+    <a role="button" :class="['navbar-burger', {'is-active': navMenuIsActive}]" @click="toggleMenu">
       <span></span>
       <span></span>
       <span></span>
-    </div>
+    </a>
   </div>
-  <div class="navbar-menu">
+  <div :class="['navbar-menu', {'is-active': navMenuIsActive}]">
     <div class="navbar-end">
       <div class="navbar-item">
-        <div class="field is-grouped">
-          <p class="control">
-            <a href="//umdcyberedu.github.io" class="button is-primary is-outlined" target="_blank">About</a>
-          </p>
-        </div>
+        <a href="//github.com/umdcyberedu" target="_blank" class="button is-dark is-outlined">
+          <b-icon icon="github-face"></b-icon>
+          <span>Github</span>
+        </a>
       </div>
     </div>
   </div>
@@ -30,7 +29,17 @@
 <script lang="ts">
 import Vue from "vue";
 export default Vue.extend({
-  name: "NavigationBar"
+  name: "NavigationBar",
+  data() {
+    return {
+      navMenuIsActive: false
+    };
+  },
+  methods: {
+    toggleMenu() {
+      this.navMenuIsActive = !this.navMenuIsActive;
+    }
+  }
 });
 </script>
 
