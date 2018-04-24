@@ -1,13 +1,4 @@
-// TODO
-// Combine titles, ids, content into object
-// Use an array to hold the object per section
-// So then CyberEduModule can accept one less prop
-
-interface Section {
-  id: number;
-  title: string;
-  content: string;
-}
+import Section from "../section_definition";
 
 let sections: Array<Section> = [];
 

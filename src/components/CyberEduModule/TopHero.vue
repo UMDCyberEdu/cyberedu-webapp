@@ -6,7 +6,7 @@
         {{title}}
       </h1>
       <h2 class="subtitle is-6">
-        <router-link to="/">
+        <router-link to="/modules">
           <div class="block block__back-to-home">
             <b-icon icon="chevron-left" size="is-small"></b-icon>
             <span>All Modules</span>
