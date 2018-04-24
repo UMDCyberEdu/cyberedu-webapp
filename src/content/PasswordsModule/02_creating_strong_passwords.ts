@@ -1,4 +1,7 @@
-export default `# Creating Strong Passwords
+const title = "Creating Strong Passwords";
+
+const content = `
+# Creating Strong Passwords
 
 Complexity and length. The complexity and length of a password determine the strength of the password.
 
@@ -20,4 +23,7 @@ Here's an example of a strong password: \`XJ?NdjneTw4947woS*W-+[DJx%$#\`
 
 But wait, that looks ridiculous. How do we remember that?
 
-In the next section, we'll learn about password management.`;
+In the next section, we'll learn about password management.
+`;
+
+export { title, content };

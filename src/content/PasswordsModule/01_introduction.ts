@@ -1,4 +1,7 @@
-export default `# Introduction
+const title = "Introduction";
+
+const content = `
+# Introduction
 
 Every year, hundreds of millions, and sometimes billions, of passwords are leaked online.
 
@@ -8,3 +11,5 @@ ALL of your data on the Internet is protected by passwords. Your messages, email
 
 In this module, you'll learn how to create strong passwords so you can keep your data secure and how you can mitigate the fallout from being hacked.
 `;
+
+export { title, content };

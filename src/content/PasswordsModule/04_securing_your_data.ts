@@ -1,4 +1,7 @@
-export default `# Securing your data with 2FA
+const title = "Enable 2FA";
+
+const content = `
+# Securing your data with 2FA
 
 “2FA” stands for “2 Factor Authentication”. It refers to 2 layers of security. Most people just have 1 layer of security: their password.
 
@@ -7,4 +10,7 @@ _Show videos/gif of what using 2FA is like_
 
 To enable 2FA for Facebook, visit https://www.facebook.com/help/148233965247823
 
-To enable 2FA for Google, visit https://www.google.com/landing/2step/`;
+To enable 2FA for Google, visit https://www.google.com/landing/2step/
+`;
+
+export { title, content };

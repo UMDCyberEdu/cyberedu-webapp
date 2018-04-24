@@ -1,15 +1,12 @@
 <template>
-<CyberEduModule :title="title" :sectionsContents="sectionsContents" :sectionsTitlesIds="sectionsTitlesIds"/>
+<CyberEduModule :title="title" :sections="sections"/>
 </template>
 
 <script lang="ts">
 import Vue from "vue";
 import CyberEduModule from "../components/CyberEduModule.vue";
 
-import {
-  sectionsContents,
-  sectionsTitlesIds
-} from "../content/PasswordsModule/_all";
+import sections from "../content/PasswordsModule/_all";
 
 export default Vue.extend({
   name: "PasswordsModule",
@@ -19,8 +16,7 @@ export default Vue.extend({
   data() {
     return {
       title: "Passwords Module",
-      sectionsContents,
-      sectionsTitlesIds
+      sections
     };
   }
 });

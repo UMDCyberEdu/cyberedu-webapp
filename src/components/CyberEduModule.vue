@@ -3,7 +3,7 @@
 <TopHero :title="title"/>
 <div class="columns is-gapless">
   <div class="column is-one-quarter">
-    <TableOfContents :sections="sectionsTitlesIds" :current_section_id="currentSectionId"/>
+    <TableOfContents :sections="sections" :current_section_id="currentSectionId"/>
   </div>
   <div class="column is-content">
     <ContentArea :markdown="currentContent"/>
@@ -56,11 +56,7 @@ export default Vue.extend({
       type: String,
       required: true
     },
-    sectionsContents: {
-      type: Array,
-      required: true
-    },
-    sectionsTitlesIds: {
+    sections: {
       type: Array,
       required: true
     }
@@ -83,13 +79,13 @@ export default Vue.extend({
   data() {
     return {
       currentSectionId: 0,
-      totalNumberOfSections: this.sectionsTitlesIds.length
+      totalNumberOfSections: this.sections.length
     };
   },
   computed: {
     currentContent() {
       // returns content as a multiline, markdown string to be rendered
-      return this.sectionsContents[this.currentSectionId];
+      return this.sections[this.currentSectionId].content;
     },
     disablePrevButton() {
       return this.currentSectionId <= 0;

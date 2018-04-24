@@ -3,44 +3,27 @@
 // Use an array to hold the object per section
 // So then CyberEduModule can accept one less prop
 
-let sectionsContents: Array<String> = [];
+interface Section {
+  id: number;
+  title: string;
+  content: string;
+}
 
-import introduction from "./01_introduction";
-sectionsContents.push(introduction);
+let sections: Array<Section> = [];
 
-import creating_strong_passwords from "./02_creating_strong_passwords";
-sectionsContents.push(creating_strong_passwords);
+import * as introduction from "./01_introduction";
+sections.push({ id: sections.length, ...introduction });
 
-import password_management from "./03_password_management";
-sectionsContents.push(password_management);
+import * as creating_strong_passwords from "./02_creating_strong_passwords";
+sections.push({ id: sections.length, ...creating_strong_passwords });
 
-import securing_your_data from "./04_securing_your_data";
-sectionsContents.push(securing_your_data);
+import * as password_management from "./03_password_management";
+sections.push({ id: sections.length, ...password_management });
 
-import additional_resources from "./05_additional_resources";
-sectionsContents.push(additional_resources);
+import * as enable_2fa from "./04_securing_your_data";
+sections.push({ id: sections.length, ...enable_2fa });
 
-const sectionsTitlesIds = [
-  {
-    id: 0,
-    title: "Introduction"
-  },
-  {
-    id: 1,
-    title: "Strong Passwords"
-  },
-  {
-    id: 2,
-    title: "Password Management"
-  },
-  {
-    id: 3,
-    title: "Enabling 2FA"
-  },
-  {
-    id: 4,
-    title: "Additional Resources"
-  }
-];
+import * as additional_resources from "./05_additional_resources";
+sections.push({ id: sections.length, ...additional_resources });
 
-export { sectionsContents, sectionsTitlesIds };
+export default sections;
