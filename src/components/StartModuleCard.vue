@@ -8,7 +8,7 @@
   <p><slot>The description goes here.</slot></p>
   <br>
   <router-link :to="pathToModule">
-    <a href="#" class="button is-primary is-medium">Start</a>
+    <button class="button is-primary is-medium">Start</button>
   </router-link>
 </div>
 </template>
@@ -38,7 +38,7 @@ export default Vue.extend({
 <style lang="scss" scoped>
 $primary: #ec644b;
 
-a.button {
+button.button {
   width: 100%;
 }
 
