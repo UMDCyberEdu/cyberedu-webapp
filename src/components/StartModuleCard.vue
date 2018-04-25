@@ -1,7 +1,7 @@
 <template>
 <div class="box has-text-centered">
   <figure class="image is-4by3">
-    <img :src="img" :alt="title + ' Image'">
+    <img :src="img" :alt="'Image representing '+ title + ' Module'">
   </figure>
   <br>
   <h3 class="title is-3">{{title}}</h3>

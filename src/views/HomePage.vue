@@ -1,4 +1,15 @@
 <template>
+<div>
+  <section class="hero is-primary">
+    <div class="hero-body">
+      <div class="container">
+        <h1 class="title is-1 is-spaced">
+          CyberEdu Modules
+        </h1>
+      </div>
+    </div>
+  </section>
+
   <section class="section">
     <div class="columns">
       <div class="column is-4">
@@ -28,6 +39,8 @@
       </div>
     </div>
   </section>
+
+</div>
 </template>
 
 <script lang="ts">
